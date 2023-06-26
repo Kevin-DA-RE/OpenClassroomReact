@@ -2,9 +2,13 @@ import CareScale from "./CareScale";
 import "../styles/PlantItem.css";
 
 function PlantItem({ name, cover, id, light, water }) {
+  function handleClick(plantName) {
+    console.log('✨ Ceci est un clic ✨');
+  }
+
   return (
     <div>
-      <li key={id} className="lmj-plant-item">
+      <li key={id} className="lmj-plant-item" onClick={handleClick}>
         <img
           src={cover}
           className="lmj-plant-item-cover"
